@@ -47,3 +47,33 @@ SelectionSort(arr, n):
 * 세 정렬 알고리즘이 동작함을 Proof by Induction으로 증명 가능
 * 셋 모두 in-place 알고리즘으로 추가 메모리 필요 없음
 * 셋 모두 `O(N^2)`의 시간 복잡도
+
+<br/>
+<br/>
+
+# Merge Sort
+```python
+MergeSort(arr):
+n = len(arr)
+if n <= 1:
+    return arr
+
+left = MergeSort(arr[0:n/2])
+right = MergeSort(arr[n/2:n])
+return merge(left, right)
+```
+* 배열을 절반으로 나누어 재귀적으로 왼쪽, 오른쪽을 정렬한 후 병합
+* 시간 복잡도는 `O(nlogn)`. `log(n)`개의 레벨에서 각각 `merge`하는 데에 `O(n)` 소요
+
+
+### 연결 리스트의 정렬
+* 퀵소트와 같이 random access가 필요한 알고리즘은 연결 리스트에서 불리
+* 힙소트 등은 연결 리스트에 대해 동작 불가능
+* 위와 같은 이유로 연결 리스트를 정렬할 때 병합정렬이 선호됨
+* merge를 random access를 사용하지 않고 재귀적으로 link를 연결하도록 [구현](https://www.geeksforgeeks.org/merge-sort-for-linked-list/)
+
+
+### Summary
+* 외부 정렬의 기본이 되는 알고리즘
+* 연결 리스트의 데이터를 정렬할 때 퀵/힙정렬보다 효율적
+* GPU를 이용한 정렬 알고리즘 병렬화에 유리
