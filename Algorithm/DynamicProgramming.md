@@ -3,7 +3,7 @@
 * 큰 문제를 작은 부분 문제로 분할 가능
 * 큰 문제의 해를 부분 문제의 해를 이용해 표현
 * `Fibonacci` : $F(i+1) = F(i) + F(i-1)$
-* `Bellman-Ford` : $d^{(i+1)}[v] \leftarrow min\{ d^{(i)}[v], min_u\{ d^{(i)}[u] + weight(u,v) \} \}$
+* `Bellman-Ford` : $d^{(i+1)}[v] \leftarrow min( d^{(i)}[v], min_u( d^{(i)}[u] + weight(u,v) ) )$
 * 부분 문제에 대한 최적의 해를 상위 문제의 최적의 해를 구하는 데 이용
 
 ### Overlapping sub-problems
