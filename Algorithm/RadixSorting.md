@@ -41,7 +41,7 @@ for lsd to msd:
 
 ### Complexity
 * `M`보다 작거나 같은 `n`개의 정수를 `r`을 베이스로 정렬
-* digit의 수 $ d=\lfloor\log_{r}{M}\rfloor +1$
+* digit의 수 $d = \lfloor \log_{r}{M} \rfloor + 1$
 * 각 단계에서 `r`개의 버킷을 초기화 뒤 `n`개의 요소를 삽입. $O(n+r)$
 * 베이스 `r`이 크면 시간복잡도는 적지만 공간복잡도는 크다
 * 베이스 `r`이 작으면 시간복잡도는 크지만 공간복잡도는 작다
