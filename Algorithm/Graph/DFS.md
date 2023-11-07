@@ -41,4 +41,4 @@ DFS(node v):
 ### DFS의 활용
 * 트리를 구성
 * connected component 탐색
-* topological sort
+* [topological sort](./TopoSort.md)
