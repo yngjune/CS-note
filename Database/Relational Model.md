@@ -52,6 +52,16 @@ $$r(R) \subset D_1 \times D_2 \times ... \times D_n$$
 
 <br/>
 
+## Relational Query Language
+* `query language` : SQL 등 데이터베이스에 정보를 요청하기 위한 언어
+* `procedural` : 얻고자 하는 정보와 함께 어떻게 정보를 얻는지 과정 기술
+* `nonprocedural` : 얻고자 하는 정보만 기술
+* `relational operation` : 테이블을 이용해 join 등의 여러 동작을 수행 가능
+* `relational algebra` : 하나 이상의 relation을 입력으로 받아 relation을 출력
+* 원하는 결과를 얻기 위해 여러 동작을 수행하는 등 모듈화에 용이
+
+<br/>
+
 ## Integrity Constraints
 * Entity Integrity
     * PK의 값은 null이 될 수 없다
