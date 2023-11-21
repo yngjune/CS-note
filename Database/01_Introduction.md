@@ -66,3 +66,7 @@
 3. 최적화
 4. 최적화된 relational algebra expression 실행
 5. 결과를 사용자에게 반환
+
+<br/>
+
+## Non Relational Databases

@@ -205,4 +205,4 @@ where semester="Fall" and year=2009 and
 * [서브쿼리 vs 조인](https://kimsyoung.tistory.com/entry/SUBQUERY-%EC%99%80-JOIN-%EC%9D%98-%EC%B0%A8%EC%9D%B4-%E4%B8%8A) 각각 언제 써야 하나?
 * subquery in from vs where clause?
 * Storage Engine?
-* db-book ch05 (function, procedure, trigger, ...)
+* db-book ch05 (function, procedure, trigger, recursive query, ...)
