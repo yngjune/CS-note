@@ -65,6 +65,41 @@
 <br/>
 
 ## Closure
-### Closure for set of Functional Dependencies
+* F의 closure : F의 모든 functional dependency로부터 논리적으로 추론할 수 있는 functional dependency의 집합
+* $F^{+}$ 로 표기
 
-### Closure of Attribute Sets
+### Armstrong's Axiom을 통한 F+ 계산
+* reflexivity : $\beta \subseteq \alpha$ 라면 $\alpha \rightarrow \beta$
+* augmentation : $\alpha \rightarrow \beta$ 라면 $\gamma\alpha \rightarrow \gamma\beta$
+* transitivity : $\alpha \rightarrow \beta, \beta \rightarrow \gamma$ 라면 $\alpha \rightarrow \gamma$
+
+```python
+F+ = F
+repeat
+    for f in F+:
+        F+.add(reflexivity(f))
+        F+.add(augmentation(f))
+    for f1, f2 in F+:
+        if f1, f2 combinable:
+            F+.add(transitivity(f1, f2))
+
+until F+ dont change
+```
+
+### Closure of Attribute Sets 통한 F+ 계산
+* F에 대해, attribute의 집합 $\alpha$의 closure의 정의
+    * F에 대해 알파로 결정할 수 있는 attr의 집합
+    * $\alpha^{+}$ 로 표기
+```python
+result = alpha
+while result changes:
+    for b -> c in F:
+        if b in result:
+            result.add(c)
+```
+
+#### 계산 과정
+1. attr의 멱집합의 공집합을 제외한 모든 원소 $\alpha$에 대해 $\alpha^{+}$ 계산
+2. 계산된 $\alpha^{+}$를 분해해 F+에 추가
+    * 예를 들어, {B}의 clousre가 {B, C}인 경우
+    * B->B, B->C, B->BC를 F+에 추가
